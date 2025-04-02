@@ -122,7 +122,7 @@ You can manually trigger a sync from the Actions tab in your repository:
    - Example:
      ```
      TARGET_REPO_URL=https://github.com/Saviru/your-target-repo.git
-     TARGET_BRANCH=main
+     TARGET_BRANCH=target-branch
      ```
 
 5. **Test the Workflow**:
