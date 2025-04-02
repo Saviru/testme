@@ -4,7 +4,7 @@
 [![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-2088FF?style=flat&logo=githubactions&logoColor=white)](https://github.com/features/actions)
 [![Sync Repositories](https://github.com/Saviru/Automatic_repo-sync-bot/actions/workflows/repo-sync-bot.yml/badge.svg)](https://github.com/Saviru/Automatic_repo-sync-bot/actions/workflows/repo-sync-bot.yml)
 
-A powerful GitHub Action workflow that automatically synchronizes repositories, allowing you to maintain mirrors or backups of your code with flexible branch mapping.
+A powerful GitHub Action workflow that automatically synchronizes repositories, allowing you to maintain mirrors or backups of your code with flexible branch mapping. **You can direcly use this as a template and create your project without any other work or copy and pasting.**
 
 <br>
 
