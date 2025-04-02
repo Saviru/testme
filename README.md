@@ -8,7 +8,7 @@ A powerful GitHub Action workflow that automatically synchronizes repositories, 
 
 <br>
 
-## 🌟 Features <hr>
+## 🌟 Features
 
 - **Automatic Syncing**: Synchronize repositories on every push or manually trigger syncs
 - **Smart Branch Mapping**: Configurable branch mapping with intelligent defaults
@@ -18,7 +18,7 @@ A powerful GitHub Action workflow that automatically synchronizes repositories, 
 
 <br>
 
-## 📋 Setup Instructions <hr>
+## 📋 Setup Instructions
 
 ### 1. Create the Workflow File
 
@@ -61,7 +61,7 @@ If you prefer not to commit a .env file, add this secret instead:
 
 <br>
 
-## 🔄 Branch Logic <hr>
+## 🔄 Branch Logic
 
 The workflow follows these rules for determining which branch to use in the target repository:
 
@@ -76,7 +76,7 @@ The workflow follows these rules for determining which branch to use in the targ
 
 <br>
 
-## 📊 Sync Status <hr>
+## 📊 Sync Status
 
 After each sync, a `sync-status.md` file is created in the target repository with detailed information about:
 
@@ -87,7 +87,7 @@ After each sync, a `sync-status.md` file is created in the target repository wit
 
 <br>
 
-## ⚙️ Manual Triggering <hr>
+## ⚙️ Manual Triggering
 
 You can manually trigger a sync from the Actions tab in your repository:
 
@@ -99,7 +99,22 @@ You can manually trigger a sync from the Actions tab in your repository:
 
 <br>
 
-## 🔒 Security Considerations <hr>
+## 🤝 Co-Author Support
+
+You can add multiple co-authors to commits made by the sync bot. This is useful for:
+
+- Properly attributing contributions when syncing collaborative work
+- Ensuring commit history reflects all contributors
+- Maintaining accurate authorship in mirrored repositories
+
+To add co-authors, include them in the `.env` file:
+```
+CO_AUTHORS="Example1 <example1@example.com>, Example2 <example2@example.com>"
+```
+
+<br>
+
+## 🔒 Security Considerations
 
 - The sync token should have the minimal permissions needed
 - Never commit your personal access token to the repository
@@ -107,7 +122,7 @@ You can manually trigger a sync from the Actions tab in your repository:
 
 <br>
 
-## ✨ How to Use This Project <hr>
+## ✨ How to Use This Project
 
 1. **Fork or Clone**: Fork this repository or clone it to your local machine to get started
 
@@ -123,6 +138,7 @@ You can manually trigger a sync from the Actions tab in your repository:
      ```
      TARGET_REPO_URL=https://github.com/Saviru/your-target-repo.git
      TARGET_BRANCH=target-branch
+     CO_AUTHORS="Example1 <example1@example.com>, Example2 <example2@example.com>"
      ```
 
 5. **Test the Workflow**:
@@ -140,13 +156,17 @@ You can manually trigger a sync from the Actions tab in your repository:
 ## 🛠️ Troubleshooting <hr>
 
 **Issue**: Workflow fails with authentication errors
-- **Solution**: Verify your SYNC_TOKEN has the correct permissions
+- **Solution**: Verify your SYNC_TOKEN has the correct permissions.
 
 **Issue**: Files aren't syncing correctly
-- **Solution**: Check the workflow run logs for errors and verify your .env configuration
+- **Solution**: Check the workflow run logs for errors and verify your .env configuration.
 
 **Issue**: Workflow files not syncing
-- **Solution**: Your token needs the `workflow` scope to sync workflow files
+- **Solution**: Your token needs the `workflow` scope to sync workflow files.
+
+**Issue**: Co-authors not appearing in commits
+- **Solution**: Ensure the CO_AUTHORS format is correct with name and email in angle brackets.
+
 
 <br>
 
